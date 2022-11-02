@@ -170,7 +170,7 @@ class Preguntas : AppCompatActivity() {
 
 
     fun reloj() {
-        var duration: Long = TimeUnit.SECONDS.toMillis(5)
+        var duration: Long = TimeUnit.SECONDS.toMillis(10)
 
         object : CountDownTimer(duration, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -281,9 +281,10 @@ class Preguntas : AppCompatActivity() {
                 applicationContext,
                 "¡¡Fallaste!!",
                 Toast.LENGTH_SHORT
-            )
 
+            )
             toast.show()
+
         }
 
 
