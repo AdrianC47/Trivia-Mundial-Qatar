@@ -159,6 +159,64 @@ class Preguntas : AppCompatActivity() {
                 "Alemania 2006"
             )
         )
+        listaDePreguntas.add(
+            ModeloPregunta(
+                R.drawable.primera,
+                "¿Cuándo tuvo lugar la primera Copa Mundial de Fútbol?",
+                "1920",
+                "1930",
+                "1940",
+                "1950",
+                "1930"
+            )
+        )
+        listaDePreguntas.add(
+            ModeloPregunta(
+                R.drawable.maximo,
+                "¿Quién es el máximo goleador de la historia de la Copa Mundial de Fútbol?",
+                "Miroslav Klose",
+                "Ronaldo Nazario",
+                "Gerd Müller",
+                "Pelé",
+                "Miroslav Klose"
+            )
+        )
+
+        listaDePreguntas.add(
+            ModeloPregunta(
+                R.drawable.potter,
+                "¿A qué futbolista se conoce con el apodo de Harry Potter?",
+                "Luis Arturo Hernández",
+                "Diego Maradona",
+                "Just Fontaine",
+                "Ricardo Quaresma",
+                "Ricardo Quaresma"
+            )
+        )
+        listaDePreguntas.add(
+            ModeloPregunta(
+                R.drawable.espania,
+                "¿Cuántos mundiales de fútbol ha ganado España?",
+                "1",
+                "2",
+                "3",
+                "4",
+                "1"
+            )
+        )
+
+        listaDePreguntas.add(
+            ModeloPregunta(
+                R.drawable.mundial86,
+                "¿Qué equipo ganó el mundial en 1986?",
+                "Argentina",
+                "Italia",
+                "Francia",
+                "Alemania",
+                "Argentina"
+            )
+        )
+
 
         listaDePreguntas.shuffle()
         questionModel = listaDePreguntas[index]
@@ -190,7 +248,7 @@ class Preguntas : AppCompatActivity() {
 
             override fun onFinish() {
                 index++
-                if (index < listaDePreguntas.size) {
+                if (index < 10) {
                     questionModel = listaDePreguntas[index]
                     establecerPreguntas()
                     resetearFondo()
@@ -238,7 +296,7 @@ class Preguntas : AppCompatActivity() {
         toast.show()
         intent.putExtra("Aciertos",respuestasCorrectas.toString())
         intent.putExtra("jugador",jugador)
-        intent.putExtra("total",listaDePreguntas.size.toString())
+        intent.putExtra("total","10")
 
         startActivity(intent)
     }
